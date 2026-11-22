@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
       art.classList.add('blushing');
       message.textContent = messages[cheersCount % messages.length];
       cheersCount += 1;
-      await wait(1500);
+      // Keep the red cheeks visible until the next cheers click.
     } finally {
-      art.classList.remove('blushing');
       button.disabled = false;
       busy = false;
     }
